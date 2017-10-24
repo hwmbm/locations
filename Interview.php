@@ -263,3 +263,98 @@ val val &data c
  *
  *
  */
+
+
+/**
+ * 2-7
+ *
+ *function &mgfunc(){
+ *  static $b=10;
+ * return $b;
+ * }
+ *
+ * $a=mgfunc();--->10
+ * $a=&mgfunc();
+ * $a=100;;
+ * echo mgfunc();----->100
+ */
+
+/**引用外部文件
+ *
+ * include/require语句包含并运行指定文件
+ * 如果给出路劲名称按照路劲来找，否则从include_path中查找
+ * 如果include_path中也没有,则从调用脚本文件所在的目录和当前工作目录下寻找
+ *
+ * 当一个文件被包含时，其中所包含的代码继承了include所在行的变量范围
+ *
+ * 加载过程中未找到文件则include结构会发出一条警告（E_WARNING）,脚本会继续运行；
+ * require错误：会发出一个致命错误,在出错时产生E_COMPILE_ERROR级别的错误.将导致脚本中止
+ * require（include）/require_one(include_once)唯一区别是会检查该文件是否被包含，如果是则不会再次包含
+ *
+ *
+ * 系统内置函数：
+ * 时间日期函数：
+ *  date.strtotime().mktime().time().microtime().date_default_timezone_set()
+ *
+ * ip处理函数
+ *  ip2long().long2ip()
+ *
+ * 打印处理
+ *  print().printf().print_r().echo.sprintf().var_dump().var_export()
+ *
+ * 序列化和反序列化函数
+ * serialize().unserialize()
+ *
+ * 字符串处理函数
+ *  implode（）.explode().join().strrev().trim().rtrim().ltrim().strstr().number_format()...
+ *
+ * 数组处理函数
+ * array_keys().array_values().array_diff().array_intersect().
+ * array_merge().array_shift().array_unshift().array_pop().array_push().sort()...
+ */
+
+/*
+ *
+    $var1 = 5;
+    $var2 = 10;
+
+    function foo(&$my_var)
+    {
+        global $var1;
+        $var1 += 2;
+        $var2 = 4;
+        $my_var += 3;
+        return $var2;
+    }
+
+    $my_var = 5;
+    echo foo($my_var). "\n";--->4
+    echo $my_var. "\n";-------->8
+    echo $var1;---------------->7
+    echo $var2;---------------->10
+    $bar = 'foo';
+    $my_var = 10;
+    echo $bar($my_var). "\n";------->4
+
+ */
+
+/**2-8
+ * 至少写出一种验证139开头的11位手机号码的正则表达式
+ */
+
+/*
+ * 正则表达式的作用：分割.查找.匹配.替换
+ * 分隔符：正斜线/.hash符号#以及取反符号～
+ *
+ */
+
+
+/**2-9
+ * 不断在文件hello.txt头部写入一行“Hello World”字符串，要求代码完整
+ *
+ */
+
+/*
+ * fopen()用来打开一个文件，打开时需要指定打开模式
+ *
+ */
